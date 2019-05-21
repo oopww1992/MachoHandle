@@ -7,8 +7,10 @@ Pod::Spec.new do |s|
   s.author             = { "cjsliuj@163.com" => "cjsliuj@163.com" }
 
   s.osx.deployment_target = "10.10"
+   if s.respond_to? 'swift_version'
+    s.swift_version = "3.0"
+  end
   s.ios.deployment_target = "8.0"
-  s.swift_version = '3.0'
   s.source       = { :git => "https://github.com/cjsliuj/MachoHandle.git", :tag => "#{s.version}" }
   s.source_files  = "Source/**/*.{swift,m,h}"
   s.public_header_files = 'Source/**/*.h'
